@@ -545,9 +545,10 @@ class NameType(ObjectIdentifier):
         '0.2.262.1.10.7.20': 'name_distinguisher',
         # GOST
         '1.2.643.100.1': 'ogrn',
+        '1.2.643.100.3': 'snils',
+        '1.2.643.100.4': 'innle',
         '1.2.643.100.5': 'ogrnip',
         '1.2.643.3.131.1.1': 'inn',
-        '1.2.643.100.3': 'snils',
     }
 
     # This order is largely based on observed order seen in EV certs from
@@ -590,6 +591,7 @@ class NameType(ObjectIdentifier):
         'ogrn',
         'ogrnip',
         'inn',
+        'innle',
         'snils',
     ]
 
@@ -659,6 +661,7 @@ class NameType(ObjectIdentifier):
             'ogrn': 'ОГРН',
             'ogrnip': 'ОГРНИП',
             'inn': 'ИНН',
+            'innle': 'ИНН ЮЛ',
             'snils': 'СНИЛС',
         }.get(self.native, self.native)
 
@@ -711,6 +714,7 @@ class NameTypeAndValue(Sequence):
         'ogrn': NumericString,
         'ogrnip': NumericString,
         'inn': NumericString,
+        'innle': NumericString,
         'snils': NumericString,
     }
 
